@@ -1,0 +1,29 @@
+#:kivy 1.9
+# Pull Down from top for settings:
+# Settings Screen
+# Adjust moving average for shown speed
+# Turn on/off wifi hotspot, default to off
+# Storage location, usb or internal share
+# screen brightness
+# save settings as json, set filesystem to rw, copy to location, set to ro
+# otherwise use changes for current boot only
+# Reset to default
+# ? Calibrate imu
+
+# Main Screen
+# Have a label in the center of the screen that is a dot which is green when
+# ready to record, black when something is wrong, and red when recording
+# Show current speed measured above the distance, average for the last 0.5s
+
+# Saving, Do not turn off popup at end of recording along with filenumber
+
+
+BoxLayout:
+    orientation: 'vertical'
+    Camera:
+        id: camera
+        play: False
+    ToggleButton:
+        text: 'Record'
+        size_hint_y: None
+        height: '48dp'
